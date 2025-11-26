@@ -5,6 +5,7 @@ export const getMessages = (client) => {
     try{
         const worker = new bullWorker("toRespond", async job => {
             await client.sendMessage(job.data.to, job.data.subject)
+            console.log("Mensagem enviada para:", job.data.to)
         }, {
             connection: {
                 host: process.env.REDIS_HOST,

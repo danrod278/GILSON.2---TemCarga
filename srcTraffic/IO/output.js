@@ -5,9 +5,7 @@ export const sendMessages = async (client) => {
         getMessages(client)
         
     } catch (error) {
-        console.error("Error socall getMEssages,",error)
+        console.error("Error to call getMEssages,",error)
     }
-    console.log("MEnsagem enviada para:", nContato);
-
+    
 }
-

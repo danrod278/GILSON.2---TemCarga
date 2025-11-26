@@ -15,11 +15,7 @@ export const packer = async ()=>{
                 port: process.env.REDIS_PORT,
                 password: process.env.REDIS_PASSWORD
             },
-            concurrency:10,
-            limiter:{
-                max:300,
-                duration:1000*60
-            }
+            concurrency:10
         })
     } catch (error) {
         console.error("Error when packing a message",error)
